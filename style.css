@@ -1,0 +1,15 @@
+.grid {
+    display: flex;
+}
+
+.column .row{
+    flex: 1;
+    margin: 1px;
+    width: 10px;
+    height: 10px;
+    border: 1px;
+    border-color: black;
+    background: grey;
+
+
+}
