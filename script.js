@@ -1,7 +1,7 @@
 let grid = document.querySelector(".grid");
 
-let columns = 30;
-let rows = 30;
+let columns = 128;
+let rows = 128;
 
 for (let i = 0; i < columns; ++i) {
   let column = document.createElement("div");

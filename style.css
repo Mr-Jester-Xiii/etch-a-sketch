@@ -1,15 +1,25 @@
 .grid {
-    display: flex;
+  margin: 0px;
+  display: flex;
+  height: 700px;
+  width: 700px;
+  justify-content: stretch;
+  align-items: stretch;
 }
 
-.column .row{
-    flex: 1;
-    margin: 1px;
-    width: 10px;
-    height: 10px;
-    border: 1px;
-    border-color: black;
-    background: grey;
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0px;
+  background: white;
+}
 
+.row {
+  flex: 1;
+  margin: 0px;
+}
 
+.column, .row {
+    outline: solid 0.5px rgb(226, 226, 226);
 }
