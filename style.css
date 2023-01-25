@@ -1,3 +1,8 @@
+html {
+  background-color: #fff8ea;
+  font-family: sans-serif;
+}
+
 .grid {
   margin: 0px;
   display: flex;
@@ -5,6 +10,7 @@
   width: 700px;
   justify-content: stretch;
   align-items: stretch;
+  border: solid 5px #36395a;
 }
 
 .column {
@@ -20,11 +26,58 @@
   margin: 0px;
 }
 
-.column, .cell {
-    outline: solid 0.5px rgb(226, 226, 226);
+.column,
+.cell {
+  outline: solid 0.5px rgb(226, 226, 226);
 }
 
-/* .cell:hover {
-    scale: 2 2;
-    background-color: black;
-} */
+.toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  will-change: box-shadow, transform;
+  background: #fcfcfd;
+  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%),
+    0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+  height: 48px;
+  padding: 0 32px;
+  font-size: 18px;
+  border-radius: 6px;
+  color: #36395a;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  margin: 20px;
+}
+.button:hover {
+  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%),
+    0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+  transform: translateY(-2px);
+}
+.button:active {
+  box-shadow: inset 0px 3px 7px #d6d6e7;
+  transform: translateY(2px);
+}
+
+.footer {
+  color: grey;
+  font-size: 12px;
+  text-align: center;
+  margin: 20px;
+}
+
+.header {
+  font-size: 18px;
+  text-align: center;
+}
