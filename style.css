@@ -15,11 +15,16 @@
   background: white;
 }
 
-.row {
+.cell {
   flex: 1;
   margin: 0px;
 }
 
-.column, .row {
+.column, .cell {
     outline: solid 0.5px rgb(226, 226, 226);
 }
+
+/* .cell:hover {
+    scale: 2 2;
+    background-color: black;
+} */
