@@ -1,7 +1,7 @@
 let grid = document.querySelector(".grid");
 
-let columns = 32;
-let rows = 32;
+let columns = 16;
+let rows = 16;
 
 function drawGrid() {
   for (let i = 0; i < columns; ++i) {
@@ -25,6 +25,14 @@ function wipeGrid() {
 
 drawGrid();
 
+const btn16 = document.querySelector("#btn16");
+btn16.addEventListener("click", () => {
+  columns = 16;
+  rows = 16;
+  wipeGrid();
+  drawGrid();
+});
+
 const btn32 = document.querySelector("#btn32");
 btn32.addEventListener("click", () => {
   columns = 32;
@@ -37,14 +45,6 @@ const btn64 = document.querySelector("#btn64");
 btn64.addEventListener("click", () => {
   columns = 64;
   rows = 64;
-  wipeGrid();
-  drawGrid();
-});
-
-const btn128 = document.querySelector("#btn128");
-btn128.addEventListener("click", () => {
-  columns = 128;
-  rows = 128;
   wipeGrid();
   drawGrid();
 });
