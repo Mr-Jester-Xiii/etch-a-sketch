@@ -27,8 +27,32 @@ function wipeGrid() {
 
 drawGrid();
 
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", () => {
+const btn32 = document.querySelector("#btn32");
+btn32.addEventListener("click", () => {
+  columns = 32;
+  rows = 32;
   wipeGrid();
+  drawGrid();
 });
 
+const btn64 = document.querySelector("#btn64");
+btn64.addEventListener("click", () => {
+  columns = 64;
+  rows = 64;
+  wipeGrid();
+  drawGrid();
+});
+
+const btn128 = document.querySelector("#btn128");
+btn128.addEventListener("click", () => {
+  columns = 128;
+  rows = 128;
+  wipeGrid();
+  drawGrid();
+});
+
+const resetbtn = document.querySelector("#resetbtn");
+resetbtn.addEventListener("click", () => {
+  wipeGrid();
+  drawGrid();
+})
