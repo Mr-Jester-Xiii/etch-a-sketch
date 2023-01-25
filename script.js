@@ -1,11 +1,7 @@
 let grid = document.querySelector(".grid");
 
-let columns = 10;
-let rows = 10;
-
-// function changeColour() {
-//     alert("Touch");
-// }
+let columns = 32;
+let rows = 32;
 
 function drawGrid() {
   for (let i = 0; i < columns; ++i) {
@@ -14,6 +10,9 @@ function drawGrid() {
     for (let j = 0; j < rows; ++j) {
       let cell = document.createElement("div");
       cell.className = "cell";
+      cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = 'black';
+      })
       column.appendChild(cell);
     }
     grid.appendChild(column);
@@ -21,8 +20,7 @@ function drawGrid() {
 }
 
 function wipeGrid() {
-  while (grid.hasChildNodes())
-  grid.removeChild(grid.firstChild);
+  while (grid.hasChildNodes()) grid.removeChild(grid.firstChild);
 }
 
 drawGrid();
@@ -55,4 +53,5 @@ const resetbtn = document.querySelector("#resetbtn");
 resetbtn.addEventListener("click", () => {
   wipeGrid();
   drawGrid();
-})
+});
+
