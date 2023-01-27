@@ -51,7 +51,21 @@ btn64.addEventListener("click", () => {
 
 const resetbtn = document.querySelector("#resetbtn");
 resetbtn.addEventListener("click", () => {
+  grid.classList.add("shake");
   wipeGrid();
   drawGrid();
 });
+
+const custombtn = document.querySelector('#custombtn');
+custombtn.addEventListener("click", () => {
+  let custom = prompt("Please enter grid size. Max:150.", "");
+  if (custom <= 150) {
+  columns = custom;
+  rows = custom;
+  wipeGrid();
+  drawGrid();
+  } else {
+    alert("Thats not gonna work. Try again")
+  }
+})
 

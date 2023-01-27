@@ -24,6 +24,7 @@ html {
 .cell {
   flex: 1;
   margin: 0px;
+  transition: 0.2s;
 }
 
 .column,
