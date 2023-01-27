@@ -51,7 +51,6 @@ btn64.addEventListener("click", () => {
 
 const resetbtn = document.querySelector("#resetbtn");
 resetbtn.addEventListener("click", () => {
-  grid.classList.add("shake");
   wipeGrid();
   drawGrid();
 });
